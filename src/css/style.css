@@ -1,0 +1,140 @@
+/* Shared (mostly)*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:not(.active) {
+  transition: color 0.1s linear;
+}
+
+.main {
+  width: 90%;
+  margin: 1rem auto 0;
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.main p {
+  width: 100%;
+}
+
+.imgContainer {
+  display: flex;
+}
+
+/* everything Header  */
+
+.mainHeader {
+  background-image: linear-gradient(transparent, transparent 90%, white 100%), url("../images/back.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  display: flex;
+  height: 18rem;
+  flex-direction: column-reverse;
+  align-items: center;
+  width: 100%;
+}
+
+/* everything Footer */
+
+.mainFooter {
+  width: 100%;
+  background-image:linear-gradient(#00000000, #323e45 5%);
+  padding: 1rem 1rem 1px;
+  color: white;
+}
+
+.mainFooter a {
+  color: white;
+}
+
+.mainFooter a:hover {
+  color: #65bdd1;
+}
+
+.footerTabs {
+  width: 100%;
+  display: flex;
+  min-height: 15rem;
+  justify-content: space-around;
+}
+
+.footerTabs>div {
+  width: 30%;
+  color: white;
+}
+
+/* everything Navbar */
+
+.mainNav {
+  display: flex;
+  position: absolute;
+  width: 100%;
+  justify-content: space-evenly;
+  transition: all 0.5s ease-out;
+}
+
+.mainNav>div {
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  border-radius: 0 0 50px 50px;
+  padding: 0 0 0.5rem;
+  background: rgba(255, 255, 255, 0);
+  overflow: hidden;
+}
+
+.mainNav a {
+  color: #f5f5f5;
+  text-shadow: 0px 0px 2px #323e45;
+  padding: 0.5rem 1rem;
+}
+
+.mainNav a:hover {
+  color: #65bdd1;
+}
+
+.mainNav a.active {
+  color: black;
+  text-shadow: none;
+  border-radius: 0 0 10px 10px;
+}
+
+.dynamicNav {
+  position: fixed;
+  top: -5rem;
+}
+
+.dynamicNav>div {
+  background: #323e45;
+  box-shadow: 0px 0px 5px 1px rgb(0, 0, 0, 0.6);
+}
+
+.dynamicNav a {
+  text-shadow: none;
+}
+
+.dynamicNav a.active {
+  background-color: #65bdd1;
+  color: #f5f5f5;
+}
+
+.fixedNav {
+  top: 0;
+  position: fixed;
+}
