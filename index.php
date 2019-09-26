@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-
+<div class="slider">
+  <button>Test</button>
+</div>
 <h1>Test</h1>
 <p>
   Aujourd'hui les entreprises opèrent dans un environnement complexe et de plus en plus compétitif. En effet, il

@@ -11,6 +11,12 @@ body {
   font-size: 15px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  width:100%;
+  text-align: center;
+}
+
 a {
   text-decoration: none;
 }
@@ -39,10 +45,7 @@ a:not(.active) {
 /* everything Header  */
 
 .mainHeader {
-  background-image: linear-gradient(transparent, transparent 90%, white 100%), url("../images/back.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: top;
+  background-image: linear-gradient(#004ca9 95%, white);
   display: flex;
   height: 18rem;
   flex-direction: column-reverse;
@@ -54,7 +57,7 @@ a:not(.active) {
 
 .mainFooter {
   width: 100%;
-  background-image:linear-gradient(#00000000, #323e45 5%);
+  background-image: linear-gradient(#00000000, #323e45 5%);
   padding: 1rem 1rem 1px;
   color: white;
 }
@@ -101,7 +104,6 @@ a:not(.active) {
 
 .mainNav a {
   color: #f5f5f5;
-  text-shadow: 0px 0px 2px #323e45;
   padding: 0.5rem 1rem;
 }
 
@@ -110,7 +112,7 @@ a:not(.active) {
 }
 
 .mainNav a.active {
-  color: black;
+  color: #65bdd1;
   text-shadow: none;
   border-radius: 0 0 10px 10px;
 }
@@ -121,7 +123,7 @@ a:not(.active) {
 }
 
 .dynamicNav>div {
-  background: #323e45;
+  background: #004ca9;
   box-shadow: 0px 0px 5px 1px rgb(0, 0, 0, 0.6);
 }
 
@@ -137,4 +139,44 @@ a:not(.active) {
 .fixedNav {
   top: 0;
   position: fixed;
+}
+
+/* Misc */
+
+.slider {
+  height: 30rem;
+  width: 46rem;
+  background-image: url("../images/slider1.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100% 100%;
+  transition: all 2s linear;
+  animation: slider 10s infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes slider {
+  33% {
+    background-image: url("../images/slider2.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 100%;
+    transition: all 2s linear;
+  }
+  66%{
+    background-image: url("../images/slider3.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 100%;
+    transition: all 2s linear;
+  }
+  100%{
+    background-image: url("../images/slider1.jpg");
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 100% 100%;
+    transition: all 2s linear;
+  }
 }
