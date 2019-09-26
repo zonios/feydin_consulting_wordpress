@@ -19,7 +19,6 @@
     </div>
     <p>© FEYDIN MANAGEMENT CONSULTING</p>
   </footer>
-  <script src="<?php echo get_bloginfo('template_directory'); ?>/src/js/script.js"></script>
   <?php wp_footer(); ?>
 </body>
 
