@@ -13,7 +13,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
-  width:100%;
+  width: 100%;
   text-align: center;
 }
 
@@ -27,7 +27,7 @@ a:not(.active) {
 
 .main {
   width: 90%;
-  margin: 1rem auto 0;
+  margin: 0 auto;
   padding: 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -47,10 +47,11 @@ a:not(.active) {
 .mainHeader {
   background-image: linear-gradient(#004ca9 95%, white);
   display: flex;
-  height: 18rem;
+  height: 14rem;
   flex-direction: column-reverse;
   align-items: center;
   width: 100%;
+  margin-bottom: 2rem;
 }
 
 /* everything Footer */
@@ -90,13 +91,14 @@ a:not(.active) {
   width: 100%;
   justify-content: space-evenly;
   transition: all 0.5s ease-out;
+  z-index: 20;
 }
 
 .mainNav>div {
   display: flex;
   justify-content: space-evenly;
   width: 90%;
-  border-radius: 0 0 50px 50px;
+  border-radius: 0 0 20px 20px;
   padding: 0 0 0.5rem;
   background: rgba(255, 255, 255, 0);
   overflow: hidden;
@@ -141,42 +143,81 @@ a:not(.active) {
   position: fixed;
 }
 
-/* Misc */
 
+/* homepage slider */
 .slider {
-  height: 30rem;
-  width: 46rem;
-  background-image: url("../images/slider1.jpg");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100% 100%;
-  transition: all 2s linear;
-  animation: slider 10s infinite;
+  position: relative;
+  width: 64rem;
+  height: 36rem;
+  margin: 0 auto;
+  overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 
-@keyframes slider {
-  33% {
-    background-image: url("../images/slider2.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-    transition: all 2s linear;
-  }
-  66%{
-    background-image: url("../images/slider3.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-    transition: all 2s linear;
-  }
-  100%{
-    background-image: url("../images/slider1.jpg");
-    background-repeat: no-repeat;
-    background-position: top;
-    background-size: 100% 100%;
-    transition: all 2s linear;
-  }
+.slider input {
+  display: none;
+}
+
+.slider label {
+  display: inline-block;
+  width: 1.2rem;
+  height: 1.2rem;
+  border: solid 3px #004ca9;
+  border-radius: 999px;
+  background-color: transparent;
+  margin: 0 6px;
+  z-index: 2;
+  cursor: pointer;
+  transition-duration: .4s;
+  align-self: flex-end;
+}
+
+.slider input:checked+label {
+  background-color: #004ca9;
+}
+
+.slider .slide {
+  position: absolute;
+  background-position: bottom;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 96%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transform: translateX(-100%);
+  transition-duration: .4s;
+  opacity: 1;
+}
+
+.slider input:checked~.slide {
+  transform: translateX(100%);
+}
+
+.slider input:checked+label+.slide {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.slidebg1 {
+  background-image: url("../images/slider1.jpg");
+}
+
+.slidebg2 {
+  background-image: url("../images/slider2.jpg");
+}
+
+.slidebg3 {
+  background-image: url("../images/slider3.jpg");
+}
+.slider a {
+  z-index: 2;
+  position: absolute;
+  top: 50%;
+  color: white;
+  background-color: #65bdd1;
+  padding: 1rem;
+  border-radius: 10px;
 }

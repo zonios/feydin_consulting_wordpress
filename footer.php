@@ -1,4 +1,4 @@
-</div>
+    
   </div>
   <footer class="mainFooter">
     <div class="footerTabs">
