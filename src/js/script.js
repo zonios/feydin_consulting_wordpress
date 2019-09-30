@@ -1,4 +1,3 @@
-$(".main").css("padding-top", $(".mainNav").css("height"));
 
 // Navbar transition
 $(window).on('scroll', function () {
@@ -8,12 +7,18 @@ $(window).on('scroll', function () {
   if (4 * navHeight < windowTop) {
     nav.addClass('dynamicNav');
     nav.addClass('fixedNav');
-  } else if ( navHeight + 10 < windowTop) {
+  } else if (navHeight + 10 < windowTop) {
     nav.addClass('dynamicNav');
     nav.removeClass('fixedNav');
-    console.log(nav.css("height"));
   } else {
     nav.removeClass('dynamicNav');
     nav.removeClass('fixedNav');
   }
 });
+
+$(document).ready(function () {
+  $("#main").css("padding-top", $(".mainNav").css("height"));
+});
+setTimeout(() => {
+  $("#main").css("padding-top", $(".mainNav").css("height"));
+}, 20);

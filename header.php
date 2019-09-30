@@ -11,21 +11,17 @@
 </head>
 
 <body>
+
   <nav class="mainNav">
+    <a href="" class="navLogo"></a>
     <div>
-      <a href="<?php echo get_bloginfo( 'wpurl' );?>">Accueil</a>
-      <a href="">L'entreprise</a>
-      <a href="">Nos services</a>
-      <a href="">Actualité</a>
-      <a href="">Contact</a>
-      <a href="">Franchises Internationales</a>
-      <a href="">Feydin Eco-System</a>
+      <a href="">Overview</a>
+      <a href="">Your Strategy</a>
+      <a href="">Sales Performance</a>
+      <a href="">Our Insights</a>
+      <a href="">Contact Us</a>
     </div>
   </nav>
 
-  <header class="mainHeader">
-    <img src="<?php echo get_bloginfo('template_directory'); ?>/src/images/feydinheadercropped.png" alt="">
-  </header>
+  <div id="main">
 
-  <div class="contain">
-    
