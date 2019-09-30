@@ -1,4 +1,4 @@
-/* Shared (mostly)*/
+/* ----------- Shared (mostly) ------------- */
 
 @font-face {
   font-family: "utmtimes";
@@ -14,7 +14,6 @@ body {
   padding: 0;
   font-family: utmtimes;
   font-size: 18px;
-  background-color: slategrey;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,36 +25,29 @@ a {
   color: currentColor;
 }
 
-a:visited {
-  color: currentColor;
-}
-
-a:not(.active) {
-  transition: color 0.1s linear;
-}
-
 .main {
-  width: 90%;
-  margin: 0 auto;
-  padding: 2rem;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
-/* everything Header  */
-
-.mainHeader {
-  background: white;
-  display: flex;
-  height: 14rem;
-  flex-direction: column-reverse;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 2rem;
+.videoTitle {
+  position: relative;
 }
 
-/* everything Navbar */
+.videoTitle h2 {
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  color: white;
+  font-weight: bold;
+}
+
+.videoTitle video {
+  width: 100%;
+}
+
+/* ---------- everything Navbar --------------*/
 
 .mainNav {
   background: white;
@@ -64,7 +56,6 @@ a:not(.active) {
   width: 100%;
   justify-content: space-evenly;
   padding: 4rem 0.5rem 2.5rem;
-  transition: all 0.5s ease-out;
   z-index: 20;
 }
 
@@ -80,20 +71,39 @@ a:not(.active) {
   padding: 0.6rem 0.2rem;
 }
 
-.mainNav a:hover {}
-
-.mainNav a.active {
-  border-bottom: 2px solid #4472c4;
+.mainNav>div>a {
+  position: relative;
+  display: flex;
+  justify-content: center;
 }
+
+.mainNav>div>a:before {
+  content: "";
+  width: 0;
+  border-bottom: solid 2px #4472c4;
+  position: absolute;
+  bottom: 0;
+  left: auto;
+  right: auto;
+  transition: all 0.3s cubic-bezier(.72, .86, .03, .97);
+}
+
+.mainNav>div>a:hover:before, .mainNav>div>a.active:before {
+  width: 110%;
+}
+
+/* .mainNav a:hover {} */
 
 .dynamicNav {
   position: fixed;
-  top: -5rem;
+  top: -20rem;
+  transition: all 0.3s ease-out;
 }
 
 .fixedNav {
   top: 0;
   position: fixed;
+  padding: 1rem 0.5rem 1rem;
 }
 
 .navLogo {
