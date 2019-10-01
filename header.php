@@ -13,7 +13,7 @@
 <body>
 
   <nav class="mainNav">
-    <span href="" class="navLogo"></span>
+    <span class="navLogo"></span>
     <?php
       wp_nav_menu([
         'menu_class' => '',
