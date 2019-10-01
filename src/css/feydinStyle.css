@@ -33,22 +33,6 @@ a {
   text-align: center;
 }
 
-.videoTitle {
-  position: relative;
-}
-
-.videoTitle h2 {
-  position: absolute;
-  top: 10%;
-  left: 15%;
-  color: white;
-  font-weight: bold;
-}
-
-.videoTitle video {
-  width: 100%;
-}
-
 li {
   list-style: none;
 }
@@ -146,4 +130,81 @@ li {
 .footerTabs>div {
   width: 30%;
   color: white;
+}
+
+/* --------------------- Main pages ----------------------------------- */
+
+.videoTitle {
+  position: relative;
+}
+
+.videoTitle h2 {
+  position: absolute;
+  color: white;
+  font-weight: bold;
+}
+
+.videoOverview h2 {
+  top: 10%;
+  left: 15%;
+}
+
+.videoSalesPerformance h2 {
+  top: 20%;
+  left: 50%;
+}
+
+.videoYourStrategy {
+  justify-content: center;
+  display: flex;
+}
+
+.videoYourStrategy h2 {
+  top: 50%;
+}
+
+.videoOurInsights h2 {
+  top: 30%;
+  left: 60%;
+}
+
+.videoTitle video {
+  width: 100%;
+}
+
+.contactContent {
+  display: flex;
+  text-align: left;
+  width: 80%;
+  margin: 0 auto;
+  flex-direction: column;
+}
+
+.contactContent>div {
+  display: flex;
+}
+
+.contactContent>div>* {
+  width: 50%;
+}
+
+.contactText {
+  padding: 0 1rem;
+}
+
+.contactPic img {
+  width: 100%;
+  height: 100%;
+}
+
+.contactText.franchisees p {
+  font-size: 16px
+}
+
+.contactText.franchisees h2 {
+  text-align: center;
+}
+
+.contactText.feydinInfo {
+  font-size: 22px;
 }

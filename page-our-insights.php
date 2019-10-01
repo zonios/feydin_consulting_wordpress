@@ -2,18 +2,11 @@
 get_header();
 ?>
 
-<div class="main">
-<?php
-if (have_posts()) : while (have_posts()) : the_post();
-?>
-  <h1><?= the_title(); ?></h1>
-  <div><?= the_content(); ?></div>
-
-<?php
-  endwhile;
-endif;
-?>
-
+<div class="videoTitle videoOurInsights">
+  <h2>Your company deserves <br> a top performance</h2>
+  <video autoplay muted loop>
+    <source src="<?= get_template_directory_uri(); ?>/src/images/our_insight_video.mp4" type="video/mp4">
+  </video>
 </div>
 
 <?php

@@ -1,11 +1,12 @@
 <?php get_header(); ?>
-<div class="videoTitle">
+<div class="videoTitle videoOverview">
   <h2>Your company deserves <br> a top performance</h2>
   <video autoplay muted loop>
     <source src="<?= get_template_directory_uri(); ?>/src/images/homepage_video.mp4" type="video/mp4">
   </video>
 </div>
-<p>Founded in 2015. FEYDIN is a Consulting boutique of the 21' Century.
+<p>
+  Founded in 2015. FEYDIN is a Consulting boutique of the 21' Century.
   <br>
   Since day one we have the objective to give access
   <br>
@@ -27,7 +28,7 @@
   <br>
   <br>
 </p>
-<img src="<?= get_template_directory_uri(); ?>/src/images/vincent_mefflet.png" alt="">
+<img src="<?= get_template_directory_uri(); ?>/src/images/vincent_mefflet.png" alt="" width="20%">
 <h2>Vincent Mefflet</h2>
 <p>
   Owner of FEYDIN  Consulting Group
