@@ -13,14 +13,22 @@
 <body>
 
   <nav class="mainNav">
-    <a href="" class="navLogo"></a>
-    <div>
+    <span href="" class="navLogo"></span>
+    <?php
+      wp_nav_menu([
+        'menu_class' => '',
+        'items_wrap' => '<div>%3$s</div>',
+        'theme_location' => 'main-menu',
+        'container' => ''
+      ]);
+    ?>
+    <!-- <div>
       <a href="">Overview</a>
       <a href="">Your Strategy</a>
       <a href="">Sales Performance</a>
       <a href="">Our Insights</a>
       <a href="">Contact Us</a>
-    </div>
+    </div> -->
   </nav>
 
   <div id="main">

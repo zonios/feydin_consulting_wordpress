@@ -49,6 +49,10 @@ a {
   width: 100%;
 }
 
+li {
+  list-style: none;
+}
+
 /* ---------- everything Navbar --------------*/
 
 .mainNav {
@@ -73,13 +77,13 @@ a {
   padding: 0.6rem 0.2rem;
 }
 
-.mainNav>div>a {
+.mainNav a {
   position: relative;
   display: flex;
   justify-content: center;
 }
 
-.mainNav>div>a:before {
+.mainNav a:before {
   content: "";
   width: 0;
   border-bottom: solid 2px #4472c4;
@@ -90,7 +94,7 @@ a {
   transition: all 0.3s cubic-bezier(.72, .86, .03, .97);
 }
 
-.mainNav>div>a:hover:before, .mainNav>div>a.active:before {
+.mainNav a:hover:before, .mainNav li.active a:before {
   width: 110%;
 }
 
