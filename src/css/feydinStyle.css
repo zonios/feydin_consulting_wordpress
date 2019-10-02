@@ -172,6 +172,11 @@ li {
   width: 100%;
 }
 
+.insightContent{
+  width: 80%;
+  margin: 0 auto;
+}
+
 .contactContent {
   display: flex;
   text-align: left;
