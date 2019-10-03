@@ -123,8 +123,8 @@ li {
 .footerTabs {
   width: 100%;
   display: flex;
-  min-height: 15rem;
   justify-content: space-around;
+  margin-bottom: 2rem;
 }
 
 .footerTabs>div {

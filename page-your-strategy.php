@@ -2,7 +2,6 @@
 get_header();
 ?>
 
-
 <div class="videoTitle videoYourStrategy">
   <h2>Your business needs a powerful strategy</h2>
   <video autoplay muted loop>
@@ -32,6 +31,7 @@ get_header();
   <br>
   strategy, not the objectives
 </p>
+
 <?php
 get_footer();
 ?>
