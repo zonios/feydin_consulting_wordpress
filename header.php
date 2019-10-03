@@ -22,13 +22,6 @@
         'container' => ''
       ]);
     ?>
-    <!-- <div>
-      <a href="">Overview</a>
-      <a href="">Your Strategy</a>
-      <a href="">Sales Performance</a>
-      <a href="">Our Insights</a>
-      <a href="">Contact Us</a>
-    </div> -->
   </nav>
 
   <div id="main">
