@@ -11,7 +11,7 @@
 </head>
 
 <body>
-
+  <span id="goToTop"></span>
   <nav class="mainNav">
     <span class="navLogo"></span>
     <?php

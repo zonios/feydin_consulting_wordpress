@@ -25,19 +25,54 @@ a {
   color: currentColor;
 }
 
-#main {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
-  height: 100%;
-  text-align: center;
-}
-
 li {
   list-style: none;
 }
 
-/* ---------- everything Navbar --------------*/
+td {
+  padding: 10px 20px;
+}
+
+.wp-block-image figcaption {
+  font-size: 120%;
+}
+
+.wp-block-pullquote>blockquote , blockquote{
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 60%;
+}
+
+blockquote {
+  text-align: right !important;
+}
+
+blockquote>p {
+  text-align: center;
+}
+
+blockquote>cite {
+  font-style: italic;
+}
+
+blockquote>cite::before {
+  content: "- ";
+}
+
+blockquote>p:before, blockquote>p:after {
+  font-size: 2em;
+  line-height: 0;
+}
+
+blockquote>p::before {
+  content: "“";
+}
+
+blockquote>p::after {
+  content: "„";
+}
+
+/* ---------------------------------------- everything Navbar --------------------------------------------*/
 
 .mainNav {
   background: white;
@@ -103,7 +138,7 @@ li {
   background-size: 100% 100%;
 }
 
-/* everything Footer */
+/* --------------------------------------- everything Footer ------------------------------------------ */
 
 .mainFooter {
   width: 100%;
@@ -117,7 +152,7 @@ li {
 }
 
 .mainFooter a:hover {
-  color: #65bdd1;
+  color: #4472c4;
 }
 
 .footerTabs {
@@ -132,7 +167,7 @@ li {
   color: white;
 }
 
-/* --------------------- Main pages ----------------------------------- */
+/* --------------------------------------------- Main pages -------------------------------------------- */
 
 .videoTitle {
   position: relative;
@@ -172,7 +207,7 @@ li {
   width: 100%;
 }
 
-.insightContent{
+.insightContent {
   width: 80%;
   margin: 0 auto;
 }
@@ -212,4 +247,53 @@ li {
 
 .contactText.feydinInfo {
   font-size: 22px;
+}
+
+/* -------------------------------------------- misc ----------------------------------------------- */
+
+#goToTop {
+  height: 2rem;
+  width: 2rem;
+  position: fixed;
+  bottom: -25%;
+  right: 3%;
+  background: url("../images/up_arrow.svg"), #cccccc;
+  background-position: center;
+  background-size: 100%, 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  border-radius: 100px;
+  transition: 0.8s ease-out;
+  transition-property: bottom;
+  z-index: 5;
+}
+
+#goToTop.shown {
+  bottom: 5%;
+}
+
+#main {
+  /* display: flex;
+  flex-wrap: wrap;
+  justify-content: center; */
+  height: 100%;
+  text-align: center;
+}
+
+.wp-block-image {
+  margin: 0 auto !important;
+}
+
+.wp-block-pullquote {
+  border-style: solid;
+  border-width: 4px 0;
+}
+
+.has-fixed-layout {
+  width: 80% !important;
+}
+
+table, table.wp-block-table.is-style-stripes {
+  margin: 10px auto;
+  border: 2px solid black;
 }

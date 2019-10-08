@@ -2,7 +2,6 @@
 get_header();
 ?>
 
-<div class="main">
 <?php
 if (have_posts()) : while (have_posts()) : the_post();
 ?>
@@ -14,7 +13,6 @@ if (have_posts()) : while (have_posts()) : the_post();
 endif;
 ?>
 
-</div>
 
 <?php
 get_footer();

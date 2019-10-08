@@ -14,11 +14,29 @@ $(window).on('scroll', function () {
     nav.removeClass('dynamicNav');
     nav.removeClass('fixedNav');
   }
+
+  let goToTop = $('#goToTop');
+  let goToTopHeight = $(window).height()/2;
+
+  if (goToTopHeight < windowTop) {
+    goToTop.addClass("shown");
+  } else {
+    goToTop.removeClass("shown");
+  }
+
 });
 
 $(document).ready(function () {
   $("#main").css("padding-top", $(".mainNav").css("height"));
+
+  $("#goToTop").on("click", function () {
+    $('html, body').stop().animate(
+      {
+        scrollTop: 0
+      }, 300);
+  });
 });
 setTimeout(() => {
   $("#main").css("padding-top", $(".mainNav").css("height"));
 }, 20);
+
