@@ -221,6 +221,39 @@ blockquote>p::after {
   width: 100%;
 }
 
+/* ---------------------------------------------- Insights page ------------------------------------------ */
+
+.insightsContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-align: left;
+}
+
+.postCard {
+  width: 30%;
+}
+
+.postCard>img {}
+
+.postCard>h3 {
+  text-align: center;
+}
+
+.postCard>p {}
+
+.postCard>p:first-of-type {
+  text-align: center;
+}
+.postCard .date {
+  text-transform: capitalize;
+}
+.postCat {}
+
+.postCat+.postCat::before {
+  content: "-";
+}
+
 /* -------------------------------------------- misc ----------------------------------------------- */
 
 #goToTop {
@@ -250,6 +283,7 @@ blockquote>p::after {
   justify-content: center; */
   height: 100%;
   text-align: center;
+  word-wrap: break-word;
 }
 
 #main a {

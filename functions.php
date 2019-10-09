@@ -1,12 +1,6 @@
 <?php
-function feydin_scripts()
-{
-  wp_enqueue_style("feydinStyle", get_bloginfo('template_directory') . "/src/css/feydinStyle.css");
 
-  wp_enqueue_script("jquerymin",  get_bloginfo('template_directory') . "/src/js/jquery-3.4.1.min.js");
-  wp_enqueue_script("script", get_bloginfo('template_directory') . "/src/js/script.js", ["jquerymin"]);
-}
-add_action("wp_enqueue_scripts", "feydin_scripts");
+add_theme_support( 'post-thumbnails', array( 'post' ) ); 
 
 function register_my_menus()
 {
@@ -17,6 +11,15 @@ function register_my_menus()
   );
 }
 add_action('init', 'register_my_menus');
+
+function feydin_scripts()
+{
+  wp_enqueue_style("feydinStyle", get_bloginfo('template_directory') . "/src/css/feydinStyle.css");
+
+  wp_enqueue_script("jquerymin",  get_bloginfo('template_directory') . "/src/js/jquery-3.4.1.min.js");
+  wp_enqueue_script("script", get_bloginfo('template_directory') . "/src/js/script.js", ["jquerymin"]);
+}
+add_action("wp_enqueue_scripts", "feydin_scripts");
 
 function active_nav_class($classes)
 {
