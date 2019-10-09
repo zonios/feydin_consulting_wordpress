@@ -2,19 +2,19 @@
     <footer class="mainFooter">
       <div class="footerTabs">
         <div>
-          <h2>Liens pour le site</h2>
+          <h2>Sitemap</h2>
           <p><a href="">Overview</a></p>
           <p><a href="">Sales Performances</a></p>
           <p><a href="">Our Insights</a></p>
         </div>
         <div>
-          <h2>Dernières nouvelles</h2>
-          <p><a href="">exemples de nouvelles intéressantes</a></p>
-          <p><a href="">exemples de nouvelles intéressantes</a></p>
-          <p><a href="">exemples de nouvelles intéressantes</a></p>
+          <h2>Latest Insights</h2>
+          <p><a href="">Insight of good interest</a></p>
+          <p><a href="">Interesting insight example</a></p>
+          <p><a href="">Example of good insights</a></p>
         </div>
         <div>
-          <h2>Contactez-nous</h2>
+          <h2>Contact us</h2>
           <p>
             46 Avenue de Foestraets
             <br>

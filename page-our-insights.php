@@ -8,7 +8,8 @@ get_header();
     <source src="<?= get_template_directory_uri(); ?>/src/images/our_insight_video.mp4" type="video/mp4">
   </video>
 </div>
-<div class="insightContent">
+<div class="mainContent">
+  
   <h2>
     Marketing anarchy in the iPhone range?
   </h2>
@@ -33,6 +34,7 @@ get_header();
     <br><br>
     I am a fan of this 1 trillion $ company so you will understand that I expect perfection from them...even regarding the product nomenclature.
   </p>
+
 </div>
 <?php
 get_footer();
