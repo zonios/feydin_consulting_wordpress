@@ -8,18 +8,14 @@ get_header();
     <source src="<?= get_template_directory_uri(); ?>/src/images/your_strategy_video.mp4" type="video/mp4">
   </video>
 </div>
-
+<div class="mainContent">
   <?php
   if (have_posts()) : while (have_posts()) : the_post();
-      ?>
-
-      <div><?= the_content();?></div>
-
-  <?php
+      the_content(); 
     endwhile;
   endif;
   ?>
-
+</div>
 <?php
 get_footer();
 ?>
