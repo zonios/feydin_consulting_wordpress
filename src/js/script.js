@@ -27,7 +27,7 @@ $(window).on('scroll', function () {
 });
 
 $(document).ready(function () {
-  $("#main").css("padding-top", $(".mainNav").css("height"));
+  $(".main").css("padding-top", $(".mainNav").css("height"));
 
   $("#goToTop").on("click", function () {
     $('html, body').stop().animate(
@@ -37,6 +37,6 @@ $(document).ready(function () {
   });
 });
 setTimeout(() => {
-  $("#main").css("padding-top", $(".mainNav").css("height"));
+  $(".main").css("padding-top", $(".mainNav").css("height"));
 }, 20);
 

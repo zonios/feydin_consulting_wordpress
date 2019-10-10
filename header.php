@@ -24,5 +24,5 @@
     ?>
   </nav>
 
-  <div id="main">
+  <div class="main">
 

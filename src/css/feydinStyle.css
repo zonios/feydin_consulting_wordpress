@@ -14,10 +14,16 @@ html, body {
   padding: 0;
   font-family: utmtimes;
   font-size: 18px;
+  color: #333333;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+}
+
+hr {
+  width: 90%;
+  margin: 1rem auto;
 }
 
 a {
@@ -230,29 +236,89 @@ blockquote>p::after {
   text-align: left;
 }
 
+.insightsContent .pagination {
+  text-align: center;
+  width: 100%;
+}
+
 .postCard {
   width: 30%;
+  padding: 1rem;
+  transition: box-shadow 0.2s;
 }
 
-.postCard>img {}
+.postCard:hover {
+  box-shadow: 0px 0px 35px -10px black;
+}
+
+.postCard img {
+  width: 90%;
+  display: block;
+  margin: 0 auto;
+  min-height: 5rem;
+}
+
+.postCard img:not([src]) {
+  visibility: hidden;
+}
 
 .postCard>h3 {
+  font-weight: bold;
+  font-size: 180%;
   text-align: center;
+  margin: 0;
 }
 
-.postCard>p {}
+.postCard>h3>a:not(:hover) {
+  text-decoration: none;
+}
+
+.postCard>p {
+  font-size: 115%;
+}
 
 .postCard>p:first-of-type {
   text-align: center;
 }
+
 .postCard .date {
   text-transform: capitalize;
+  font-style: italic;
 }
-.postCat {}
+
+.postCat {
+  color: #505050;
+}
 
 .postCat+.postCat::before {
   content: "-";
 }
+
+/* ------------------------------------------ Insight solo page ------------------------------------------ */
+
+.singleContent {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 120%;
+}
+
+.singleHeader {
+  min-height: 23rem;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.singleHeader h2 {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  font-size: 200%;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
 
 /* -------------------------------------------- misc ----------------------------------------------- */
 
@@ -277,7 +343,7 @@ blockquote>p::after {
   bottom: 5%;
 }
 
-#main {
+.main {
   /* display: flex;
   flex-wrap: wrap;
   justify-content: center; */
@@ -286,18 +352,19 @@ blockquote>p::after {
   word-wrap: break-word;
 }
 
-#main a {
+.main a {
   text-decoration: underline;
   color: #33498a;
 }
 
-#main a:hover {
+.main a:hover {
   color: #2f62fc;
 }
 
-#main>.mainContent {
+.main>.mainContent {
   width: 90%;
   margin: 0 auto;
+  padding: 1rem 0;
 }
 
 .wp-block-image {

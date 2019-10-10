@@ -8,13 +8,15 @@ get_header();
     <source src="<?= get_template_directory_uri(); ?>/src/images/our_insight_video.mp4" type="video/mp4">
   </video>
 </div>
+
 <div class="mainContent insightsContent">
 
+  <hr>
 
   <?php
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
   $args = [
-    'posts_per_page' => '8',
+    'posts_per_page' => '6',
     'post_type' => 'post',
     'paged' => $paged
   ];
@@ -23,9 +25,13 @@ get_header();
     ?>
 
     <div class="postCard">
-      <?php if (get_the_post_thumbnail_url()) : ?>
-        <img src="<?= get_the_post_thumbnail_url(); ?>" alt="thumbnail for <?php the_title(); ?> " width="100%">
-      <?php endif; ?>
+      <a href="<?= get_permalink(); ?>">
+        <img <?php if (get_the_post_thumbnail_url()) {
+                  echo ('src="' . get_the_post_thumbnail_url() . '"');
+                } else {
+                  echo ('src="' . get_template_directory_uri() . '/src/images/insight_default.png"');
+                } ?>>
+      </a>
       <p>
         <?php
           $categories = get_the_category();
@@ -33,24 +39,38 @@ get_header();
           if ($catNumber) : for ($i = 0; $i < $catNumber; $i++) :
               ?>
             <span class="postCat"> <?= ($categories[$i]->name); ?> </span>
-            <?php
-              // if ($i + 1 < $catNumber) {
-              //   echo "-";
-              // }
-            ?>
+
         <?php
             endfor;
           endif;
           ?>
       </p>
-      <h3> <?php the_title(); ?> </h3>
-      <p><span class="date"><?= get_the_date("F Y");?></span> - <?= get_the_excerpt(); ?> </p>
+      <h3> <a href="<?= get_permalink(); ?>"> <?php the_title(); ?> </a> </h3>
+      <p>
+        <span class="date"><?= get_the_date("F Y"); ?></span>
+        - <?= get_the_excerpt(); ?> 
+        <br>
+        <a href="<?= get_permalink(); ?>"> Read more </a>
+      </p>
     </div>
 
   <?php
   endwhile;
+  wp_reset_query();
   ?>
-
+  <div class="pagination">
+    <?=
+      paginate_links(array(
+        'base'         => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
+        'total'        => $posts_query->max_num_pages,
+        'current'      => max(1, get_query_var('paged')),
+        'end_size'     => 2,
+        'mid_size'     => 2,
+        'prev_text'    => __('Newer Insights'),
+        'next_text'    => __('Older Insights')
+      ));
+    ?>
+  </div>
 </div>
 <?php
 get_footer();
