@@ -27,4 +27,3 @@ get_header();
 <?php
 get_footer();
 ?>
-background: linear-gradient(#0000 35%,#000c ), <?= $thumbnail ?>, white;

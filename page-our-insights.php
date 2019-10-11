@@ -11,7 +11,7 @@ get_header();
 
 <div class="mainContent insightsContent">
 
-  <hr>
+  <!-- <hr> -->
 
   <?php
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -45,12 +45,19 @@ get_header();
           endif;
           ?>
       </p>
-      <h3> <a href="<?= get_permalink(); ?>"> <?php the_title(); ?> </a> </h3>
+      <?php
+        $title = get_the_title();
+        if (strlen($title) > 90) {
+          $shortTitle = substr($title, 0, 87);
+          $title = substr($shortTitle, 0, strrpos($shortTitle, " ")) . "...";
+        }
+        ?>
+      <h3> <a href="<?= get_permalink(); ?>" title="<?= the_title_attribute(); ?>"> <?= $title ?> </a> </h3>
       <p>
         <span class="date"><?= get_the_date("F Y"); ?></span>
-        - <?= get_the_excerpt(); ?> 
+        - <?= get_the_excerpt(); ?>
         <br>
-        <a href="<?= get_permalink(); ?>"> Read more </a>
+        <a href="<?= get_permalink(); ?>"> <?= __("Read more") ?> </a>
       </p>
     </div>
 

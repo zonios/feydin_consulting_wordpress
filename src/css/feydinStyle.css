@@ -132,7 +132,7 @@ blockquote>p::after {
 .fixedNav {
   top: 0;
   position: fixed;
-  padding: 1rem 0.5rem 1rem;
+  padding: 0.5rem;
 }
 
 .navLogo {
@@ -237,12 +237,29 @@ blockquote>p::after {
 }
 
 .insightsContent .pagination {
+  margin-top: 2rem;
   text-align: center;
   width: 100%;
+  font-size: 120%;
+}
+
+.insightsContent .pagination .page-numbers {
+  text-decoration: none;
+  margin: 0 0.2rem;
+}
+
+.insightsContent .pagination .page-numbers.next, .insightsContent .pagination .page-numbers.prev {
+  padding: 0.5rem;
+  background-color: #33498a;
+  color: white;
+}
+
+.insightsContent .pagination .page-numbers.next:hover, .insightsContent .pagination .page-numbers.prev:hover {
+  background-color: #425eb3;
 }
 
 .postCard {
-  width: 30%;
+  width: 32%;
   padding: 1rem;
   transition: box-shadow 0.2s;
 }
@@ -312,13 +329,15 @@ blockquote>p::after {
 
 .singleHeader h2 {
   position: absolute;
-  bottom: 10%;
-  left: 5%;
+  bottom: 5%;
+  left: 0;
   font-size: 200%;
   color: white;
   text-shadow: 1px 1px 2px black;
+  text-align: left;
+  padding: 0 5%;
+  margin: 0;
 }
-
 
 /* -------------------------------------------- misc ----------------------------------------------- */
 
@@ -334,9 +353,13 @@ blockquote>p::after {
   background-repeat: no-repeat;
   cursor: pointer;
   border-radius: 100px;
-  transition: 0.8s ease-out;
-  transition-property: bottom;
+  transition: 0.4s ease-out;
+  transition-property: bottom, background;
   z-index: 5;
+}
+
+#goToTop:hover {
+  background-color: #757575;
 }
 
 #goToTop.shown {
