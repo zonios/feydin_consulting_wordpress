@@ -339,6 +339,20 @@ blockquote>p::after {
   margin: 0;
 }
 
+/* -------------------------------------------- contact form 7 style ------------------------------------------------- */
+
+form.wpcf7-form {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+form.wpcf7-form label {}
+
+.wpcf7-form-control.wpcf7-submit {
+
+}
+
 /* -------------------------------------------- misc ----------------------------------------------- */
 
 #goToTop {
