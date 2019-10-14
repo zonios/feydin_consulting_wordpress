@@ -3,7 +3,7 @@ get_header();
 ?>
 
 <div class="videoTitle videoYourStrategy">
-  <h2>Your business needs a powerful strategy</h2>
+  <h2><?= nl2br(get_theme_mod("setting_feydin_caption_your_strategy"));?></h2>
   <video autoplay muted loop>
     <source src="<?= get_template_directory_uri(); ?>/src/images/your_strategy_video.mp4" type="video/mp4">
   </video>

@@ -172,7 +172,11 @@ blockquote>p::after {
 .footerTabs>div {
   width: 30%;
   color: white;
-  /* padding: 0 0 0 5%; */
+}
+
+.footerTabs>div>* {
+  margin: 1rem 0;
+  word-wrap: break-word;
 }
 
 .footerTabs>div:nth-of-type(1) {
@@ -317,6 +321,7 @@ blockquote>p::after {
   width: 70%;
   margin: 0 auto;
   font-size: 120%;
+  text-align: justify;
 }
 
 .singleHeader {
@@ -342,15 +347,23 @@ blockquote>p::after {
 /* -------------------------------------------- contact form 7 style ------------------------------------------------- */
 
 form.wpcf7-form {
-  width: 50%;
-  text-align: center;
   margin: 0 auto;
 }
 
-form.wpcf7-form label {}
+form.wpcf7-form p {
+  width: 100%;
+}
 
 .wpcf7-form-control.wpcf7-submit {
+  padding: 0.5rem 1rem;
+  background-color: #33498a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
 
+.wpcf7-form-control.wpcf7-submit:hover {
+  background-color: #425eb3;
 }
 
 /* -------------------------------------------- misc ----------------------------------------------- */
@@ -367,7 +380,7 @@ form.wpcf7-form label {}
   background-repeat: no-repeat;
   cursor: pointer;
   border-radius: 100px;
-  transition: 0.4s ease-out;
+  transition: 0.2s ease-out;
   transition-property: bottom, background;
   z-index: 5;
 }
@@ -408,6 +421,11 @@ form.wpcf7-form label {}
   margin: 0 auto !important;
 }
 
+.wp-block-image img {
+  background-size: cover;
+  height: max-content;
+}
+
 .wp-block-pullquote {
   border-style: solid;
   border-width: 4px 0;
@@ -420,4 +438,8 @@ form.wpcf7-form label {}
 table, table.wp-block-table.is-style-stripes {
   margin: 10px auto;
   border: 2px solid black;
+}
+
+.wpcf7-recaptcha>div {
+  margin: 0 auto;
 }
