@@ -54,7 +54,7 @@ function customizer_feydin($wp_customize)
 
   $wp_customize->add_control('control_feydin_contact', [
     'type' => 'textarea',
-    'description' => 'The contact informations of Feydin written in the footer',
+    'description' => 'The contact informations of Feydin',
     'section' => 'section_feydin_general',
     'settings' => 'setting_feydin_contact'
   ]);
