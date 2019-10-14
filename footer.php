@@ -1,30 +1,53 @@
+    <?php
+    wp_reset_query();
+    ?>
     </div>
     <footer class="mainFooter">
       <div class="footerTabs">
         <div>
           <h2>Sitemap</h2>
-          <p><a href="">Overview</a></p>
-          <p><a href="">Sales Performances</a></p>
-          <p><a href="">Our Insights</a></p>
+          <?php
+          wp_nav_menu([
+            'menu_class' => '',
+            'items_wrap' => '%3$s',
+            'theme_location' => 'sitemap',
+            'container' => ''
+          ]);
+          ?>
         </div>
         <div>
           <h2>Latest Insights</h2>
-          <p><a href="">Insight of good interest</a></p>
-          <p><a href="">Interesting insight example</a></p>
-          <p><a href="">Example of good insights</a></p>
+          <?php
+
+          $args = [
+            'posts_per_page' => '4',
+            'post_type' => 'post'
+          ];
+          $posts_query = new WP_Query($args);
+          while ($posts_query->have_posts()) : $posts_query->the_post();
+
+            $title = get_the_title();
+            if (strlen($title) > 100) {
+              $shortTitle = substr($title, 0, 97);
+              $title = substr($shortTitle, 0, strrpos($shortTitle, " ")) . "...";
+            }
+            ?>
+            <p><a href="<?= get_permalink(); ?>" title="<?= the_title_attribute(); ?>"><?= $title ?></a></p>
+          <?php
+          endwhile;
+          wp_reset_query();
+          ?>
+
         </div>
         <div>
           <h2>Contact us</h2>
           <p>
-            46 Avenue de Foestraets
-            <br>
-            1180 Brussel
+            <?= nl2br(get_theme_mod("setting_feydin_contact")); ?>
           </p>
-          <p>00 32 497 47 34 02 </p>
-          <p>management@feydinconsulting.com </p>
         </div>
       </div>
       <p>© FEYDIN MANAGEMENT CONSULTING</p>
+      <p style="text-align:right; color:grey;"> Developped by Sterio ZONIOS</p>
     </footer>
     <?php wp_footer(); ?>
     </body>

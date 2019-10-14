@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="videoTitle videoOverview">
-  <h2>Your company deserves <br> a top performance</h2>
+  <h2><?= nl2br(get_theme_mod("setting_feydin_caption_overview"));?></h2>
   <video autoplay muted loop>
     <source src="<?= get_template_directory_uri(); ?>/src/images/homepage_video.mp4" type="video/mp4">
   </video>
