@@ -1,7 +1,6 @@
 <?php
 get_header();
 ?>
-
 <div class="videoTitle videoOurInsights">
   <h2><?= nl2br(get_theme_mod("setting_feydin_caption_our_insights"));?></h2>
   <video autoplay muted loop>
@@ -11,7 +10,6 @@ get_header();
 
 <div class="mainContent insightsContent">
 
-  <!-- <hr> -->
 
   <?php
   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;

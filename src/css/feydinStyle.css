@@ -21,11 +21,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-hr {
-  width: 90%;
-  margin: 1rem auto;
-}
-
 a {
   text-decoration: none;
   color: currentColor;
@@ -76,6 +71,18 @@ blockquote>p::before {
 
 blockquote>p::after {
   content: "„";
+}
+
+input[type="submit"] {
+  padding: 0.5rem 1rem;
+  background-color: #33498a;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #425eb3;
 }
 
 /* ---------------------------------------- everything Navbar --------------------------------------------*/
@@ -265,6 +272,7 @@ blockquote>p::after {
 .postCard {
   width: 32%;
   padding: 1rem;
+  margin-bottom: 2rem;
   transition: box-shadow 0.2s;
 }
 
@@ -352,18 +360,6 @@ form.wpcf7-form {
 
 form.wpcf7-form p {
   width: 100%;
-}
-
-.wpcf7-form-control.wpcf7-submit {
-  padding: 0.5rem 1rem;
-  background-color: #33498a;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-.wpcf7-form-control.wpcf7-submit:hover {
-  background-color: #425eb3;
 }
 
 /* -------------------------------------------- misc ----------------------------------------------- */
