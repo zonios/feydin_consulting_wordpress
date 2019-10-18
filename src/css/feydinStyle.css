@@ -323,6 +323,15 @@ input[type="submit"]:hover {
   content: "-";
 }
 
+.searchContent .postCard {
+  width: 24%;
+}
+
+.searchTitle {
+  font-size: 200%;
+  margin: 0.5rem 0;
+}
+
 /* ------------------------------------------ Insight solo page ------------------------------------------ */
 
 .singleContent {
@@ -438,4 +447,12 @@ table, table.wp-block-table.is-style-stripes {
 
 .wpcf7-recaptcha>div {
   margin: 0 auto;
+}
+
+.searchForm {
+  padding: 1rem;
+}
+
+.searchForm input[name="s"] {
+  padding: 0.5rem;
 }

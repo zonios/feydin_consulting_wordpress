@@ -34,6 +34,17 @@ function active_nav_class($classes)
 add_filter('nav_menu_css_class', 'active_nav_class', 10, 1);
 
 
+function search_filter($query)
+{
+  if ($query->is_search) {
+    $query->set('post_type', 'post');
+    $query->set('paged', (get_query_var('paged')) ? get_query_var('paged') : 1);
+    $query->set('posts_per_page', 8);
+  }
+  return $query;
+}
+add_filter( 'pre_get_posts','search_filter' );
+
 function customizer_feydin($wp_customize)
 {
   $wp_customize->add_panel('panel_main_custom', [

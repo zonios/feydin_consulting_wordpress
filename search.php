@@ -1,26 +1,13 @@
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
-<div class="videoTitle videoOurInsights">
-  <h2><?= nl2br(get_theme_mod("setting_feydin_caption_our_insights"));?></h2>
-  <video autoplay muted loop>
-    <source src="<?= get_template_directory_uri(); ?>/src/images/our_insight_video.mp4" type="video/mp4">
-  </video>
-</div>
-<?= get_search_form();?>
-<div class="mainContent insightsContent">
+<?= get_search_form(); ?>
 
+<p class="searchTitle">Search results for "<?= get_search_query(); ?>"</p>
+
+<div class="mainContent insightsContent searchContent">
 
   <?php
-  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
-  $args = [
-    'posts_per_page' => '6',
-    'post_type' => 'post',
-    'paged' => $paged
-  ];
-  $posts_query = new WP_Query($args);
-  while ($posts_query->have_posts()) : $posts_query->the_post();
+  while (have_posts()) : the_post();
     ?>
 
     <div class="postCard">
@@ -52,12 +39,11 @@ get_header();
         }
         ?>
       <h3> <a href="<?= get_permalink(); ?>" title="<?= the_title_attribute(); ?>"> <?= $title ?> </a> </h3>
-      <p>
+      <!-- <p>
         <span class="date"><?= get_the_date("F Y"); ?></span>
-        - <?= get_the_excerpt(); ?>
         <br>
         <a href="<?= get_permalink(); ?>"> <?= __("Read more") ?> </a>
-      </p>
+      </p> -->
     </div>
 
   <?php
@@ -68,16 +54,15 @@ get_header();
     <?=
       paginate_links(array(
         'base'         => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
-        'total'        => $posts_query->max_num_pages,
         'current'      => max(1, get_query_var('paged')),
         'end_size'     => 2,
         'mid_size'     => 2,
+        'total'        => $wp_query->max_num_pages,
         'prev_text'    => __('Newer Insights'),
         'next_text'    => __('Older Insights')
       ));
     ?>
   </div>
 </div>
-<?php
-get_footer();
-?>
+
+<?php get_footer(); ?>
