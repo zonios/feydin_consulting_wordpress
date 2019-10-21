@@ -39,11 +39,11 @@ function search_filter($query)
   if ($query->is_search) {
     $query->set('post_type', 'post');
     $query->set('paged', (get_query_var('paged')) ? get_query_var('paged') : 1);
-    $query->set('posts_per_page', 8);
+    $query->set('posts_per_page', 12);
   }
   return $query;
 }
-add_filter( 'pre_get_posts','search_filter' );
+add_filter('pre_get_posts', 'search_filter');
 
 function customizer_feydin($wp_customize)
 {

@@ -15,6 +15,7 @@ html, body {
   font-family: utmtimes;
   font-size: 18px;
   color: #333333;
+  background-color: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -93,7 +94,7 @@ input[type="submit"]:hover {
   position: absolute;
   width: 100%;
   justify-content: space-around;
-  padding: 4rem 0.5rem 2.5rem;
+  padding: 1rem;
   z-index: 20;
 }
 
@@ -139,7 +140,7 @@ input[type="submit"]:hover {
 .fixedNav {
   top: 0;
   position: fixed;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .navLogo {
@@ -217,7 +218,7 @@ input[type="submit"]:hover {
 
 .videoSalesPerformance h2 {
   top: 20%;
-  left: 50%;
+  right: 10%;
 }
 
 .videoYourStrategy {
@@ -399,9 +400,6 @@ form.wpcf7-form p {
 }
 
 .main {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: center; */
   height: 100%;
   text-align: center;
   word-wrap: break-word;
@@ -455,4 +453,10 @@ table, table.wp-block-table.is-style-stripes {
 
 .searchForm input[name="s"] {
   padding: 0.5rem;
+}
+
+.noResults {
+  margin: 0;
+  color: #7272728c;
+  font-size: 200%;
 }
