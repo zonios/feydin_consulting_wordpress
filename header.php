@@ -13,7 +13,8 @@
 <body>
   <span id="goToTop"></span>
   <nav class="mainNav">
-    <span class="navLogo"></span>
+    <a class="navLogo" href="<?= get_home_url();?>"></a>
+    <div>
     <?php
       wp_nav_menu([
         'menu_class' => '',
@@ -22,7 +23,7 @@
         'container' => ''
       ]);
     ?>
+    </div>
   </nav>
 
   <div class="main">
-

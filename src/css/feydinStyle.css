@@ -1,462 +1,404 @@
-/* ----------- Shared (mostly) ------------- */
-
-@font-face {
-  font-family: "utmtimes";
-  src: url("../fonts/utmtimes.ttf"), url("../fonts/utmtimesitalic.ttf"), url("../fonts/utmtimesbold.ttf"), url("../fonts/utmtimesbolditalic.ttf");
-}
-
-* {
-  box-sizing: border-box;
-}
-
-html, body {
-  margin: 0;
-  padding: 0;
-  font-family: utmtimes;
-  font-size: 18px;
-  color: #333333;
-  background-color: white;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: normal;
-}
-
-a {
-  text-decoration: none;
-  color: currentColor;
-}
-
-li {
-  list-style: none;
-}
-
-td {
-  padding: 10px 20px;
-}
-
-.wp-block-image figcaption {
-  font-size: 120%;
-}
-
-.wp-block-pullquote>blockquote, blockquote {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 60%;
-}
-
-blockquote {
-  text-align: right !important;
-}
-
-blockquote>p {
-  text-align: center;
-}
-
-blockquote>cite {
-  font-style: italic;
-}
-
-blockquote>cite::before {
-  content: "- ";
-}
-
-blockquote>p:before, blockquote>p:after {
-  font-size: 2em;
-  line-height: 0;
-}
-
-blockquote>p::before {
-  content: "“";
-}
-
-blockquote>p::after {
-  content: "„";
-}
-
-input[type="submit"] {
-  padding: 0.5rem 1rem;
-  background-color: #33498a;
-  color: white;
-  border: none;
-  cursor: pointer;
-}
-
-input[type="submit"]:hover {
-  background-color: #425eb3;
-}
-
-/* ---------------------------------------- everything Navbar --------------------------------------------*/
-
-.mainNav {
-  background: white;
-  display: flex;
-  position: absolute;
-  width: 100%;
-  justify-content: space-around;
-  padding: 1rem;
-  z-index: 20;
-}
-
-.mainNav>div {
-  display: flex;
-  width: 60%;
-  justify-content: space-around;
-  align-items: center;
-  margin-right: 18%;
-}
-
-.mainNav a {
-  padding: 0.6rem 0.2rem;
-}
-
-.mainNav a {
-  position: relative;
-  display: flex;
-  justify-content: center;
-}
-
-.mainNav a:before {
-  content: "";
-  width: 0;
-  border-bottom: solid 2px #4472c4;
-  position: absolute;
-  bottom: 0;
-  left: auto;
-  right: auto;
-  transition: all 0.3s cubic-bezier(.72, .86, .03, .97);
-}
-
-.mainNav a:hover:before, .mainNav li.active a:before {
-  width: 110%;
-}
-
-.dynamicNav {
-  position: fixed;
-  top: -20rem;
-  transition: all 0.3s ease-out;
-}
-
-.fixedNav {
-  top: 0;
-  position: fixed;
-  padding: 1rem;
-}
-
-.navLogo {
-  height: 3rem;
-  width: 11.5rem;
-  background-image: url("../images/feydin_logo.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
-}
-
-/* --------------------------------------- everything Footer ------------------------------------------ */
-
-.mainFooter {
-  width: 100%;
-  background-image: linear-gradient(#00000000, #323e45 5%);
-  padding: 1rem 5rem 1px;
-  color: white;
-}
-
-.mainFooter a {
-  color: white;
-}
-
-.mainFooter a:hover {
-  color: #4472c4;
-}
-
-.footerTabs {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 2rem;
-  flex-wrap: wrap;
-}
-
-.footerTabs>div {
-  width: 30%;
-  color: white;
-}
-
-.footerTabs>div>* {
-  margin: 1rem 0;
-  word-wrap: break-word;
-}
-
-.footerTabs>div:nth-of-type(1) {
-  text-align: left;
-}
-
-.footerTabs>div:nth-of-type(2) {
-  text-align: center;
-}
-
-.footerTabs>div:nth-of-type(3) {
-  text-align: right;
-}
-
-/* --------------------------------------------- Main pages -------------------------------------------- */
-
-.videoTitle {
-  position: relative;
-}
-
-.videoTitle h2 {
-  position: absolute;
-  color: white;
-  font-weight: bold;
-}
-
-.videoOverview h2 {
-  top: 10%;
-  left: 15%;
-}
-
-.videoSalesPerformance h2 {
-  top: 20%;
-  right: 10%;
-}
-
-.videoYourStrategy {
-  justify-content: center;
-  display: flex;
-}
-
-.videoYourStrategy h2 {
-  top: 45%;
-}
-
-.videoOurInsights h2 {
-  top: 30%;
-  right: 20%;
-}
-
-.videoTitle video {
-  width: 100%;
-}
-
-/* ---------------------------------------------- Insights page ------------------------------------------ */
-
-.insightsContent {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  text-align: left;
-}
-
-.insightsContent .pagination {
-  margin-top: 2rem;
-  text-align: center;
-  width: 100%;
-  font-size: 120%;
-}
-
-.insightsContent .pagination .page-numbers {
-  text-decoration: none;
-  margin: 0 0.2rem;
-}
-
-.insightsContent .pagination .page-numbers.next, .insightsContent .pagination .page-numbers.prev {
-  padding: 0.5rem;
-  background-color: #33498a;
-  color: white;
-}
-
-.insightsContent .pagination .page-numbers.next:hover, .insightsContent .pagination .page-numbers.prev:hover {
-  background-color: #425eb3;
-}
-
-.postCard {
-  width: 32%;
-  padding: 1rem;
-  margin-bottom: 2rem;
-  transition: box-shadow 0.2s;
-}
-
-.postCard:hover {
-  box-shadow: 0px 0px 35px -10px black;
-}
-
-.postCard img {
-  width: 90%;
-  display: block;
-  margin: 0 auto;
-  min-height: 5rem;
-}
-
-.postCard img:not([src]) {
-  visibility: hidden;
-}
-
-.postCard>h3 {
-  font-weight: bold;
-  font-size: 180%;
-  text-align: center;
-  margin: 0;
-}
-
-.postCard>h3>a:not(:hover) {
-  text-decoration: none;
-}
-
-.postCard>p {
-  font-size: 115%;
-}
-
-.postCard>p:first-of-type {
-  text-align: center;
-}
-
-.postCard .date {
-  text-transform: capitalize;
-  font-style: italic;
-}
-
-.postCat {
-  color: #505050;
-}
-
-.postCat+.postCat::before {
-  content: "-";
-}
-
-.searchContent .postCard {
-  width: 24%;
-}
-
-.searchTitle {
-  font-size: 200%;
-  margin: 0.5rem 0;
-}
-
-/* ------------------------------------------ Insight solo page ------------------------------------------ */
-
-.singleContent {
-  width: 70%;
-  margin: 0 auto;
-  font-size: 120%;
-  text-align: justify;
-}
-
-.singleHeader {
-  min-height: 23rem;
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.singleHeader h2 {
-  position: absolute;
-  bottom: 5%;
-  left: 0;
-  font-size: 200%;
-  color: white;
-  text-shadow: 1px 1px 2px black;
-  text-align: left;
-  padding: 0 5%;
-  margin: 0;
-}
-
-/* -------------------------------------------- contact form 7 style ------------------------------------------------- */
-
-form.wpcf7-form {
-  margin: 0 auto;
-}
-
-form.wpcf7-form p {
-  width: 100%;
-}
-
-/* -------------------------------------------- misc ----------------------------------------------- */
-
-#goToTop {
-  height: 2rem;
-  width: 2rem;
-  position: fixed;
-  bottom: -25%;
-  right: 3%;
-  background: url("../images/up_arrow.svg"), #cccccc;
-  background-position: center;
-  background-size: 100%, 100%;
-  background-repeat: no-repeat;
-  cursor: pointer;
-  border-radius: 100px;
-  transition: 0.2s ease-out;
-  transition-property: bottom, background;
-  z-index: 5;
-}
-
-#goToTop:hover {
-  background-color: #757575;
-}
-
-#goToTop.shown {
-  bottom: 5%;
-}
-
-.main {
-  height: 100%;
-  text-align: center;
-  word-wrap: break-word;
-}
-
-.main a {
-  text-decoration: underline;
-  color: #33498a;
-}
-
-.main a:hover {
-  color: #2f62fc;
-}
-
-.main>.mainContent {
-  width: 90%;
-  margin: 0 auto;
-  padding: 1rem 0;
-}
-
-.wp-block-image {
-  margin: 0 auto !important;
-}
-
-.wp-block-image img {
-  background-size: cover;
-  height: max-content;
-}
-
-.wp-block-pullquote {
-  border-style: solid;
-  border-width: 4px 0;
-}
-
-.has-fixed-layout {
-  width: 80% !important;
-}
-
-table, table.wp-block-table.is-style-stripes {
-  margin: 10px auto;
-  border: 2px solid black;
-}
-
-.wpcf7-recaptcha>div {
-  margin: 0 auto;
-}
-
-.searchForm {
-  padding: 1rem;
-}
-
-.searchForm input[name="s"] {
-  padding: 0.5rem;
-}
-
-.noResults {
-  margin: 0;
-  color: #7272728c;
-  font-size: 200%;
-}
+@media all {
+  /* ----------- Shared (mostly) ------------- */
+  @font-face {
+    font-family: "utmtimes";
+    src: url("../fonts/utmtimes.ttf"), url("../fonts/utmtimesitalic.ttf"), url("../fonts/utmtimesbold.ttf"), url("../fonts/utmtimesbolditalic.ttf");
+  }
+  * {
+    box-sizing: border-box;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    font-family: utmtimes;
+    font-size: 18px;
+    color: #333333;
+    background-color: white;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+  }
+  a {
+    text-decoration: none;
+    color: currentColor;
+  }
+  li {
+    list-style: none;
+  }
+  td {
+    padding: 10px 20px;
+  }
+  .wp-block-image figcaption {
+    font-size: 120%;
+  }
+  .wp-block-pullquote>blockquote, blockquote {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 60%;
+  }
+  blockquote {
+    text-align: right !important;
+  }
+  blockquote>p {
+    text-align: center;
+  }
+  blockquote>cite {
+    font-style: italic;
+  }
+  blockquote>cite::before {
+    content: "- ";
+  }
+  blockquote>p:before, blockquote>p:after {
+    font-size: 2em;
+    line-height: 0;
+  }
+  blockquote>p::before {
+    content: "“";
+  }
+  blockquote>p::after {
+    content: "„";
+  }
+  input[type="submit"] {
+    padding: 0.5rem 1rem;
+    background-color: #33498a;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #425eb3;
+  }
+  /* ---------------------------------------- everything Navbar --------------------------------------------*/
+  .mainNav {
+    background: white;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    justify-content: space-around;
+    padding: 1rem;
+    z-index: 20;
+  }
+  .mainNav>div {
+    width: 60%;
+    margin-right: 18%;
+  }
+  .mainNav>div>div {
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+  }
+  .mainNav a {
+    padding: 0.6rem 0.2rem;
+  }
+  .mainNav a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  .mainNav a:before {
+    content: "";
+    width: 0;
+    border-bottom: solid 2px #4472c4;
+    position: absolute;
+    bottom: 0;
+    left: auto;
+    right: auto;
+    transition: all 0.3s cubic-bezier(.72, .86, .03, .97);
+  }
+  .mainNav a:hover:before, .mainNav li.active a:before {
+    width: 110%;
+  }
+  .dynamicNav {
+    position: fixed;
+    top: -20rem;
+    transition: all 0.3s ease-out;
+  }
+  .fixedNav {
+    top: 0;
+    position: fixed;
+    padding: 1rem;
+  }
+  .navLogo {
+    height: 3rem;
+    width: 11.5rem;
+    background-image: url("../images/feydin_logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+  }
+  .navLogo::before {
+    display: none;
+  }
+  /* --------------------------------------- everything Footer ------------------------------------------ */
+  .mainFooter {
+    width: 100%;
+    background-image: linear-gradient(#00000000, #323e45 5%);
+    padding: 1rem 5rem 1px;
+    color: white;
+  }
+  .mainFooter a {
+    color: white;
+  }
+  .mainFooter a:hover {
+    color: #4472c4;
+  }
+  .footerTabs {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+  }
+  .footerTabs>div {
+    width: 30%;
+    color: white;
+  }
+  .footerTabs>div>* {
+    margin: 1rem 0;
+    word-wrap: break-word;
+  }
+  .footerTabs>div:nth-of-type(1) {
+    text-align: left;
+  }
+  .footerTabs>div:nth-of-type(2) {
+    text-align: center;
+  }
+  .footerTabs>div:nth-of-type(3) {
+    text-align: right;
+  }
+  /* --------------------------------------------- Main pages -------------------------------------------- */
+  .videoTitle {
+    position: relative;
+  }
+  .videoTitle h2 {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+  }
+  .videoOverview h2 {
+    top: 10%;
+    left: 15%;
+  }
+  .videoSalesPerformance h2 {
+    top: 20%;
+    right: 10%;
+  }
+  .videoYourStrategy {
+    justify-content: center;
+    display: flex;
+  }
+  .videoYourStrategy h2 {
+    top: 45%;
+  }
+  .videoOurInsights h2 {
+    top: 30%;
+    right: 20%;
+  }
+  .videoTitle video {
+    width: 100%;
+  }
+  /* ---------------------------------------------- Insights page ------------------------------------------ */
+  .insightsContent {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: left;
+  }
+  .insightsContent .pagination {
+    margin-top: 2rem;
+    text-align: center;
+    width: 100%;
+    font-size: 120%;
+  }
+  .insightsContent .pagination .page-numbers {
+    text-decoration: none;
+    margin: 0 0.2rem;
+  }
+  .insightsContent .pagination .page-numbers.next, .insightsContent .pagination .page-numbers.prev {
+    padding: 0.5rem;
+    background-color: #33498a;
+    color: white;
+  }
+  .insightsContent .pagination .page-numbers.next:hover, .insightsContent .pagination .page-numbers.prev:hover {
+    background-color: #425eb3;
+  }
+  .postCard {
+    width: 32%;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    transition: box-shadow 0.2s;
+  }
+  .postCard:hover {
+    box-shadow: 0px 0px 35px -10px black;
+  }
+  .postCard img {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    min-height: 5rem;
+  }
+  .postCard img:not([src]) {
+    visibility: hidden;
+  }
+  .postCard>h3 {
+    font-weight: bold;
+    font-size: 180%;
+    text-align: center;
+    margin: 0;
+  }
+  .postCard>h3>a:not(:hover) {
+    text-decoration: none;
+  }
+  .postCard>p {
+    font-size: 115%;
+  }
+  .postCard>p:first-of-type {
+    text-align: center;
+  }
+  .postCard .date {
+    text-transform: capitalize;
+    font-style: italic;
+  }
+  .postCat {
+    color: #505050;
+  }
+  .postCat+.postCat::before {
+    content: "-";
+  }
+  .searchContent .postCard {
+    width: 24%;
+  }
+  .searchTitle {
+    font-size: 200%;
+    margin: 0.5rem 0;
+  }
+  /* ------------------------------------------ Insight solo page ------------------------------------------ */
+  .singleContent {
+    width: 70%;
+    margin: 0 auto;
+    font-size: 120%;
+    text-align: justify;
+  }
+  .singleHeader {
+    min-height: 23rem;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .singleHeader h2 {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    font-size: 200%;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+    text-align: left;
+    padding: 0 5%;
+    margin: 0;
+  }
+  /* -------------------------------------------- contact form 7 style ------------------------------------------------- */
+  form.wpcf7-form {
+    margin: 0 auto;
+  }
+  form.wpcf7-form p {
+    width: 100%;
+  }
+  /* -------------------------------------------- misc ----------------------------------------------- */
+  #goToTop {
+    height: 2rem;
+    width: 2rem;
+    position: fixed;
+    bottom: -25%;
+    right: 3%;
+    background: url("../images/up_arrow.svg"), #cccccc;
+    background-position: center;
+    background-size: 100%, 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    border-radius: 100px;
+    transition: 0.2s ease-out;
+    transition-property: bottom, background;
+    z-index: 5;
+  }
+  #goToTop:hover {
+    background-color: #757575;
+  }
+  #goToTop.shown {
+    bottom: 5%;
+  }
+  .main {
+    height: 100%;
+    text-align: center;
+    word-wrap: break-word;
+  }
+  .main a {
+    text-decoration: underline;
+    color: #33498a;
+  }
+  .main a:hover {
+    color: #2f62fc;
+  }
+  .main>.mainContent {
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem 0;
+  }
+  .wp-block-image {
+    margin: 0 auto !important;
+  }
+  .wp-block-image img {
+    background-size: cover;
+    height: max-content;
+  }
+  .wp-block-pullquote {
+    border-style: solid;
+    border-width: 4px 0;
+  }
+  table, table.wp-block-table.is-style-stripes {
+    margin: 10px auto;
+    border: 2px solid black;
+  }
+  .wpcf7-recaptcha>div {
+    margin: 0 auto;
+  }
+  .searchForm {
+    padding: 1rem;
+  }
+  .searchForm input[name="s"] {
+    padding: 0.5rem;
+  }
+  .noResults {
+    margin: 0;
+    color: #7272728c;
+    font-size: 200%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /* ----------------------------------------- Shared --------------------------------------------------- */
+  html, body {
+    /* font-size: 22px; */
+  }
+  .main>.mainContent {
+    width: 98%;
+  }
+  td {
+    padding: 3px 2px;
+  }
+  /* -------------------------------------------- misc ----------------------------------------------- */
+  .wp-block-embed {
+    margin: 0;
+  }
+  .wp-block-embed iframe {
+    width: 100%
+  }
+}
+
+@media only screen and (min-width: 600px) {}
+
+@media only screen and (min-width: 768px) {}
+
+@media only screen and (min-width: 992px) {}
+
+@media only screen and (min-width: 1200px) {}
