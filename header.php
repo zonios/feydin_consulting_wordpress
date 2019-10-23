@@ -15,6 +15,7 @@
   <nav class="mainNav">
     <a class="navLogo" href="<?= get_home_url();?>"></a>
     <div>
+      <button class="menuButt">☰</button>
     <?php
       wp_nav_menu([
         'menu_class' => '',

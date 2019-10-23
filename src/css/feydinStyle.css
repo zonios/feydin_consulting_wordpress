@@ -75,22 +75,28 @@
     position: absolute;
     width: 100%;
     justify-content: space-around;
-    padding: 1rem;
+    padding: 0.6rem;
     z-index: 20;
   }
   .mainNav>div {
-    width: 60%;
-    margin-right: 18%;
+    width: 70%;
+    margin-right: 8%;
+  }
+  .mainNav .menuButt {
+    background: none;
+    border: none;
+    font-size: 40px;
+    cursor: pointer;
+    display: none;
   }
   .mainNav>div>div {
     display: flex;
     justify-content: space-around;
     align-items: end;
+    overflow: hidden;
   }
   .mainNav a {
     padding: 0.6rem 0.2rem;
-  }
-  .mainNav a {
     position: relative;
     display: flex;
     justify-content: center;
@@ -378,13 +384,39 @@
 @media only screen and (max-width: 600px) {
   /* ----------------------------------------- Shared --------------------------------------------------- */
   html, body {
-    /* font-size: 22px; */
+    font-size: 20px;
   }
   .main>.mainContent {
     width: 98%;
   }
   td {
     padding: 3px 2px;
+  }
+  .mainNav {
+    padding: 1rem 0.2rem;
+  }
+  .mainNav .menuButt {
+    display: inline;
+  }
+  .mainNav a {
+    padding: 1.2rem 0.2rem;
+  }
+  .mainNav>div {
+    width: 50%;
+    margin-right: 0%;
+    text-align: right;
+  }
+  .mainNav>div>div {
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    background-color: wheat;
+    right: 0;
+    width: 100%;
+    top: 100%;
+  }
+  .mainNav>div li {
+    width: 60%;
   }
   /* -------------------------------------------- misc ----------------------------------------------- */
   .wp-block-embed {
@@ -395,10 +427,44 @@
   }
 }
 
-@media only screen and (min-width: 600px) {}
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+  .mainNav>div {
+    width: 80%;
+    margin-right: 0%;
+    text-align: right;
+  }
+  .mainNav>div>div {
+    align-items: center;
+    position: absolute;
+    flex-direction: column;
+    background-color: wheat;
+    right: 0;
+    width: 100%;
+    top: 100%;
+  }
+  .mainNav>div li {
+    width: 60%;
+  }
+  .mainNav a {
+    padding: 1.2rem 0.2rem;
+  }
+  .mainNav .menuButt {
+    display: inline;
+  }
+}
 
-@media only screen and (min-width: 768px) {}
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .mainNav>div {
+    width: 80%;
+    margin-right: 0%;
+  }
+}
 
-@media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 993px) and (max-width: 1200px) {
+  .mainNav>div {
+    width: 80%;
+    margin-right: 4%;
+  }
+}
 
-@media only screen and (min-width: 1200px) {}
+@media only screen and (min-width: 1201px) {}
