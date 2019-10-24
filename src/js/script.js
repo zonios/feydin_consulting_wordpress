@@ -16,13 +16,15 @@ $(window).on('scroll', function () {
   }
 
   let goToTop = $('#goToTop');
-  let goToTopHeight = $(window).height()/2;
+  let goToTopHeight = $(window).height() / 2;
 
   if (goToTopHeight < windowTop) {
     goToTop.addClass("shown");
   } else {
     goToTop.removeClass("shown");
   }
+
+  $(".mainNav>div>div").removeClass("shown");
 
 });
 
@@ -33,8 +35,13 @@ $(document).ready(function () {
     $('html, body').stop().animate(
       {
         scrollTop: 0
-      }, 600);
+      }, 400);
   });
+
+  $(".mainNav .menuButt").on("click", function () {
+    $(".mainNav>div>div").toggleClass("shown");
+  });
+
 });
 setTimeout(() => {
   $(".main").css("padding-top", $(".mainNav").css("height"));

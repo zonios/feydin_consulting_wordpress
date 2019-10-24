@@ -137,9 +137,9 @@
   }
   /* --------------------------------------- everything Footer ------------------------------------------ */
   .mainFooter {
+    padding: 1rem 2rem 1px;
     width: 100%;
     background-image: linear-gradient(#00000000, #323e45 5%);
-    padding: 1rem 5rem 1px;
     color: white;
   }
   .mainFooter a {
@@ -156,7 +156,7 @@
     flex-wrap: wrap;
   }
   .footerTabs>div {
-    width: 30%;
+    width: 36.5%;
     color: white;
   }
   .footerTabs>div>* {
@@ -168,6 +168,7 @@
   }
   .footerTabs>div:nth-of-type(2) {
     text-align: center;
+    width: 24%;
   }
   .footerTabs>div:nth-of-type(3) {
     text-align: right;
@@ -230,7 +231,7 @@
   }
   .postCard {
     width: 32%;
-    padding: 1rem;
+    padding: 0.5rem;
     margin-bottom: 2rem;
     transition: box-shadow 0.2s;
   }
@@ -275,7 +276,7 @@
     width: 24%;
   }
   .searchTitle {
-    font-size: 200%;
+    font-size: 180%;
     margin: 0.5rem 0;
   }
   /* ------------------------------------------ Insight solo page ------------------------------------------ */
@@ -410,10 +411,16 @@
     align-items: center;
     position: absolute;
     flex-direction: column;
-    background-color: wheat;
+    background-color: white;
     right: 0;
     width: 100%;
     top: 100%;
+    transition: transform 0.2s ease;
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  .mainNav>div>div.shown {
+    transform: scaleY(1);
   }
   .mainNav>div li {
     width: 60%;
@@ -424,6 +431,29 @@
   }
   .wp-block-embed iframe {
     width: 100%
+  }
+  .footerTabs>div {
+    width: 100%;
+  }
+  .footerTabs>div:nth-of-type(1), .footerTabs>div:nth-of-type(2), .footerTabs>div:nth-of-type(3) {
+    text-align: center;
+    width: 100%;
+  }
+  .postCard {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .searchContent .postCard {
+    width: 95%;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .singleContent {
+    width: 90%;
+  }
+  .singleHeader h2 {
+    font-size: 120%;
   }
 }
 
@@ -437,10 +467,16 @@
     align-items: center;
     position: absolute;
     flex-direction: column;
-    background-color: wheat;
+    background-color: white;
     right: 0;
     width: 100%;
     top: 100%;
+    transition: transform 0.2s ease;
+    transform-origin: top;
+    transform: scaleY(0);
+  }
+  .mainNav>div>div.shown {
+    transform: scaleY(1);
   }
   .mainNav>div li {
     width: 60%;
@@ -451,12 +487,49 @@
   .mainNav .menuButt {
     display: inline;
   }
+  .footerTabs>div:nth-of-type(1), .footerTabs>div:nth-of-type(2), .footerTabs>div:nth-of-type(3) {
+    text-align: center;
+    width: 100%;
+  }
+  .postCard {
+    width: 48%;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .searchContent .postCard {
+    width: 48%;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  form textarea {
+    width: 100%;
+  }
+  form input {
+    width: 80%;
+  }
+  .singleContent {
+    width: 90%;
+  }
+  .singleHeader h2 {
+    font-size: 200%;
+  }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .mainNav>div {
     width: 80%;
     margin-right: 0%;
+  }
+  .mainFooter {
+    padding: 1rem 0.5rem 1px;
+  }
+  .searchContent .postCard {
+    width: 32%;
+    padding: 0.3rem;
+    margin-bottom: 0.5rem;
+  }
+  .singleContent {
+    width: 80%;
   }
 }
 
