@@ -13,7 +13,7 @@ get_header();
           }
           ?>
 
-      <div class="singleHeader" style="background-image: linear-gradient(#0000 35%,#000c ), url('<?= $thumbnail ?>'), linear-gradient(white, white);">
+      <div class="singleHeader" style="background-image: linear-gradient(rgba(0,0,0,0) 35%, rgba(0, 0, 0, 0.9)), url('<?= $thumbnail ?>'), linear-gradient(white, white);">
 
         <h2><?= the_title(); ?></h2>
       </div>

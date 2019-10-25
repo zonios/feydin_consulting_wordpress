@@ -12,7 +12,7 @@
     padding: 0;
     font-family: utmtimes;
     font-size: 18px;
-    color: #333333;
+    color: #505050;
     background-color: white;
   }
   h1, h2, h3, h4, h5, h6 {
@@ -139,7 +139,7 @@
   .mainFooter {
     padding: 1rem 2rem 1px;
     width: 100%;
-    background-image: linear-gradient(#00000000, #323e45 5%);
+    background-image: linear-gradient(rgba(0,0,0,0), #323e45 5%);
     color: white;
   }
   .mainFooter a {
@@ -236,7 +236,7 @@
     transition: box-shadow 0.2s;
   }
   .postCard:hover {
-    box-shadow: 0px 0px 35px -10px black;
+    box-shadow: 0 0 35px -10px black;
   }
   .postCard img {
     width: 90%;
@@ -387,6 +387,9 @@
   html, body {
     font-size: 20px;
   }
+  .videoTitle h2 {
+    font-size: 120%;
+  }
   .main>.mainContent {
     width: 98%;
   }
@@ -404,7 +407,7 @@
   }
   .mainNav>div {
     width: 50%;
-    margin-right: 0%;
+    margin-right: 0;
     text-align: right;
   }
   .mainNav>div>div {
@@ -453,7 +456,7 @@
     width: 90%;
   }
   .singleHeader h2 {
-    font-size: 120%;
+    font-size: 140%;
   }
 }
 
@@ -501,27 +504,27 @@
     padding: 0.3rem;
     margin-bottom: 0.5rem;
   }
-  form textarea {
+  form.wpcf7-form textarea {
     width: 100%;
   }
-  form input {
+  form.wpcf7-form input {
     width: 80%;
   }
   .singleContent {
     width: 90%;
   }
   .singleHeader h2 {
-    font-size: 200%;
+    font-size: 180%;
   }
 }
 
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .mainNav>div {
     width: 80%;
-    margin-right: 0%;
+    margin-right: 0;
   }
   .mainFooter {
-    padding: 1rem 0.5rem 1px;
+    padding: 1rem 1rem 1px;
   }
   .searchContent .postCard {
     width: 32%;
