@@ -43,7 +43,7 @@ $(document).ready(function () {
   });
 
 });
-setTimeout(() => {
+setTimeout(function() {
   $(".main").css("padding-top", $(".mainNav").css("height"));
 }, 20);
 

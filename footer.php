@@ -47,7 +47,7 @@
         </div>
       </div>
       <p>© FEYDIN MANAGEMENT CONSULTING</p>
-      <p style="text-align:right; color:grey;"> Developped by Sterio ZONIOS</p>
+      <p style="text-align:right; color:grey;"> Developped by <a href="https://www.linkedin.com/in/sterio-zonios/"> Sterio ZONIOS</a></p>
     </footer>
     <?php wp_footer(); ?>
     </body>

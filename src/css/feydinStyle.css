@@ -75,7 +75,7 @@
     position: absolute;
     width: 100%;
     justify-content: space-around;
-    padding: 0.6rem;
+    padding: 1.5rem 0.6rem;
     z-index: 20;
   }
   .mainNav>div {
@@ -139,7 +139,7 @@
   .mainFooter {
     padding: 1rem 2rem 1px;
     width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0), #323e45 5%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0), #323e45 5%);
     color: white;
   }
   .mainFooter a {
@@ -191,11 +191,10 @@
     right: 10%;
   }
   .videoYourStrategy {
-    justify-content: center;
-    display: flex;
   }
   .videoYourStrategy h2 {
     top: 45%;
+    width: 100%;
   }
   .videoOurInsights h2 {
     top: 30%;
@@ -457,6 +456,9 @@
   }
   .singleHeader h2 {
     font-size: 140%;
+  }
+  .mainFooter {
+    padding: 1rem 1rem 1px;
   }
 }
 
